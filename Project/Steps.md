@@ -4,8 +4,6 @@ First, ensure that Terraform is installed on your system. You can download it fr
 #2. Configure AWS CLI
 Ensure you have the AWS CLI installed and configured with your AWS credentials. You can download it from the AWS CLI website. Use the following command to configure it:
 
-sh
-Copy code
 aws configure
 Enter your AWS Access Key ID, Secret Access Key, region, and output format when prompted.
 
@@ -16,8 +14,7 @@ Create a directory for your Terraform project and create a main configuration fi
 Here is an example of Terraform code using the AWS provider to create an S3 bucket.
 
 #main.tf
-hcl
-Copy code
+
 # Specify the required version of Terraform
 terraform {
   required_version = ">= 0.12"
@@ -44,30 +41,25 @@ resource "aws_s3_bucket" "example_bucket" {
 output "bucket_name" {
   value = aws_s3_bucket.example_bucket.bucket
 }
-5. Initialize Terraform
+
+#5. Initialize Terraform
 Initialize your Terraform configuration. This will download the AWS provider plugin.
 
-sh
-Copy code
 terraform init
-6. Validate the Configuration
+
+#6. Validate the Configuration
 Validate your Terraform configuration to ensure there are no syntax errors.
 
-sh
-Copy code
 terraform validate
+
 #7. Plan the Deployment
 Generate an execution plan to see what actions Terraform will take.
 
-sh
-Copy code
 terraform plan
 
 #8. Apply the Configuration
 Apply the configuration to create the resources on AWS.
 
-sh
-Copy code
 terraform apply
 Type yes when prompted to confirm the changes.
 
