@@ -23,7 +23,7 @@
 ### Reduced Risk and Cost:
 - By automating and standardizing your infrastructure setup, IaC reduces the risk of human errors and the time spent troubleshooting. This translates to cost savings and increased reliability.
 
-- # WHY Terraform
+- # WHY Terraform/ Benefits of Terraform
 
 ## Analogy: Building a House
 
