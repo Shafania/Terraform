@@ -1,71 +1,48 @@
-# 1. Install Terraform
-First, ensure that Terraform is installed on your system. You can download it from the Terraform website and follow the installation instructions for your operating system.
+# Overview of steps
 
-# 2. Configure AWS CLI
-Ensure you have the AWS CLI installed and configured with your AWS credentials. You can download it from the AWS CLI website. Use the following command to configure it:
+Create a directory for your Terraform project and create a Terraform configuration file (usually named `main.tf`) in that directory. In this file, you define the AWS provider and resources you want to create. Here's a basic example:
 
-aws configure
-Enter your AWS Access Key ID, Secret Access Key, region, and output format when prompted.
+```hcl
+   provider "aws" {
+     region = "us-east-1"  # Set your desired AWS region
+   }
 
-# 3. Create a Terraform Configuration File
-Create a directory for your Terraform project and create a main configuration file, typically named main.tf.
+   resource "aws_instance" "example" {
+     ami           = "ami-0c55b159cbfafe1f0"  # Specify an appropriate AMI ID
+     instance_type = "t2.micro"
+   }
+```
 
-#4. Write the Terraform Code
-Here is an example of Terraform code using the AWS provider to create an S3 bucket.
+## Initialize Terraform**
 
-#main.tf
+In your terminal, navigate to the directory containing your Terraform configuration files and run:
 
-# Specify the required version of Terraform
-terraform {
-  required_version = ">= 0.12"
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
-
-# Configure the AWS provider
-provider "aws" {
-  region = "us-west-2" # Change to your desired region
-}
-
-# Create an S3 bucket
-resource "aws_s3_bucket" "example_bucket" {
-  bucket = "my-unique-bucket-name" # Change to a unique bucket name
-  acl    = "private"
-}
-
-# Output the bucket name
-output "bucket_name" {
-  value = aws_s3_bucket.example_bucket.bucket
-}
-
-#5. Initialize Terraform
-Initialize your Terraform configuration. This will download the AWS provider plugin.
-
+```
 terraform init
+```
 
-#6. Validate the Configuration
-Validate your Terraform configuration to ensure there are no syntax errors.
+This command initializes the Terraform working directory, downloading any necessary provider plugins.
 
-terraform validate
+## Apply the Configuration
 
-#7. Plan the Deployment
-Generate an execution plan to see what actions Terraform will take.
+Run the following command to create the AWS resources defined in your Terraform configuration:
 
-terraform plan
-
-#8. Apply the Configuration
-Apply the configuration to create the resources on AWS.
-
+```
 terraform apply
-Type yes when prompted to confirm the changes.
+```
 
-#9. Verify the Resources
-After applying, you can verify the resources in the AWS Management Console.
+Terraform will display a plan of the changes it's going to make. Review the plan and type "yes" when prompted to apply it.
 
-Additional Resources
-Terraform AWS Provider Documentation
-Terraform Documentation
+## Verify Resources
+
+After Terraform completes the provisioning process, you can verify the resources created in the AWS Management Console or by using AWS CLI commands.
+
+## Destroy Resources
+
+If you want to remove the resources created by Terraform, you can use the following command:
+
+```
+terraform destroy
+```
+
+Be cautious when using `terraform destroy` as it will delete resources as specified in your Terraform configuration.
