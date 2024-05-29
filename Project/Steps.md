@@ -1,13 +1,13 @@
 # 1. Install Terraform
 First, ensure that Terraform is installed on your system. You can download it from the Terraform website and follow the installation instructions for your operating system.
 
-#2. Configure AWS CLI
+# 2. Configure AWS CLI
 Ensure you have the AWS CLI installed and configured with your AWS credentials. You can download it from the AWS CLI website. Use the following command to configure it:
 
 aws configure
 Enter your AWS Access Key ID, Secret Access Key, region, and output format when prompted.
 
-#3. Create a Terraform Configuration File
+# 3. Create a Terraform Configuration File
 Create a directory for your Terraform project and create a main configuration file, typically named main.tf.
 
 #4. Write the Terraform Code
