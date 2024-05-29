@@ -1,7 +1,7 @@
 ## Providers in Terraform are plugins that enable Terraform to interact with APIs of various services. They serve as a bridge between Terraform and the external systems you want to manage. Each provider offers a set of resources and data sources that Terraform can use to configure and manage the respective service.
 
 ## Example to Illustrate Providers
-Let's break it down with a simple example of using the AWS provider to create an S3 bucket.
+Let's break it down with a simple example of using the AWS provider to create an S3 bucket. 
 
 ### Install Terraform: Make sure you have Terraform installed on your system. You can download it from the Terraform website.
 
