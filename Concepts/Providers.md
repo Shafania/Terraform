@@ -3,7 +3,7 @@
 ## Example to Illustrate Providers
 Let's break it down with a simple example of using the AWS provider to create an S3 bucket. 
 
-### Install Terraform: Make sure you have Terraform installed on your system. You can download it from the Terraform website.
+### Install Terraform: Make sure you have Terraform installed on your system. You can download it  from the Terraform website.
 
 ### Configure AWS CLI: Configure your AWS CLI with your credentials. This ensures Terraform can authenticate with AWS.
 
