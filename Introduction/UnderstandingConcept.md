@@ -6,6 +6,7 @@
 - IaC lets you write down instructions (code) to create and manage your digital infrastructure, like servers, networks, and databases.
 
 ### Consistency and Reproducibility:
+
 - Just like following a recipe ensures consistent results, using IaC ensures that your infrastructure is set up the same way every time you deploy it. This reduces errors and makes it easier to reproduce your setup.
 
 ### Automation and Efficiency:
