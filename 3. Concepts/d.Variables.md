@@ -2,6 +2,8 @@
 
 Input and output variables in Terraform are essential for parameterizing and sharing values within your Terraform configurations and modules. They allow you to make your configurations more dynamic, reusable, and flexible.
 
+Variables in Terraform are like placeholders or containers where you can store information that you might need to use multiple times in your configuration. They help make your code more flexible and easier to manage.
+
 ## Input Variables
 Input variables are used to parameterize your Terraform configurations. They allow you to pass values into your modules or configurations from the outside. Input variables can be defined within a module or at the root level of your configuration. Here's how you define an input variable:
 
