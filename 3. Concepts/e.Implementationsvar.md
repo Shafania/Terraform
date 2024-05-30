@@ -1,5 +1,6 @@
 # Variables Demo
 
+
 ```hcl
 
 # Define an input variable for the EC2 instance type
