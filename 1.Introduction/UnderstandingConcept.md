@@ -4,6 +4,7 @@
 
 ### Recipe for Infrastructure:
 - IaC lets you write down instructions (code) to create and manage your digital infrastructure, like servers, networks, and databases.
+- 
 
 ### Consistency and Reproducibility:
 
